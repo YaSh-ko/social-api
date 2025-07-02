@@ -1,0 +1,141 @@
+@import "../../style.scss";
+.rightBar {
+    @include themify($themes){
+        flex: 5;
+        position: sticky;
+        top: 70px;
+        height: calc(100vh - 70px);
+        overflow: scroll;
+        background-color: themed('bgSoft');
+        font-size: 14px;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
+
+        .container {
+            padding: 20px;
+            
+            .item {
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                background-color: themed('bg');
+                color: themed('textColor');
+                .itemName {
+                    color: themed('textColorSoft');
+                    margin-bottom: 20px;
+                }
+                    
+                
+
+                .event {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 7px;
+                    border-radius: 7px;
+                    
+
+                    &:hover {
+                        background-color: themed('bgSoft');
+                    }
+                    .eventInfo {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 20px;
+                        row-gap: 5px;
+                        flex-wrap: wrap;
+
+                        .eventName {
+                            font-weight: 550;
+                            white-space: nowrap;
+                            cursor: pointer;
+                            
+                        }
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: lightgray;
+                        }
+                        .eventDate {
+                            display: flex;
+                            gap: 10px;
+                        }
+                    }
+
+                    button {
+                        padding: 7px;
+                        border-radius: 5px;
+                        background-color: themed('buttonColor');
+                        border: none;
+                        align-self: stretch;
+                        cursor: pointer;
+                    }
+
+                }
+
+
+                .user {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 7px;
+                    border-radius: 7px;
+
+                    &:hover {
+                        background-color: themed('bgSoft');
+                    }
+                    .userInfo {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        position: relative;
+
+                        .userName {
+                            font-weight: bold;
+                            cursor: pointer;
+                        }
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: lightgray;
+                            
+                        }
+
+                        .online {
+                            width: 11px;
+                            height: 11px;
+                            border-radius: 50%;
+                            background-color: limegreen;
+                            position: absolute;
+                            top: 0;
+                            left: 20px;
+                        }
+                    }
+
+                    button {
+                        padding: 7px;
+                        border-radius: 5px;
+                        background-color: themed("buttonColor");
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@import "../../style.scss";
+
+.navbar {
+    @include themify($themes){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        height: 70px;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: themed("bg");
+        color: themed('textColor');
+        border-bottom: 1px solid themed('border');
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);        
+        
+        @include mobile {
+            justify-content: end;
+        }
+        .icon-wrapper {
+                
+                .icon-hover {
+                    display: none;  
+                }
+
+                &:hover .icon-default {
+                    display: none;
+                }
+
+                &:hover .icon-hover {
+                    display: inline-block;
+                    cursor: pointer;
+                }
+                @include mobile {
+                    justify-content: end;
+                }
+            }
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            @include mobile {
+                justify-content: space-between;
+            }
+            
+            span {
+                font-weight: bold;
+                font-size: 20px;
+                color: themed('textColor');
+                
+                @include mobile {
+                    position: fixed;
+                    left: 20px;
+                    top: 25px;
+                }
+                
+            }
+
+            .search {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                border: 1px solid lightgray;
+                border-radius: 5px;
+                padding: 5px;
+                
+
+                
+                
+
+                &:hover {
+                    border: 1px solid themed('textColor');
+                }
+                input {
+                    border: none;
+                    background-color: transparent;
+                    color: themed("textColor");
+                    padding: 5px;
+                    width: 100%; // Замените фиксированную ширину на адаптивную
+                    max-width: 800px;
+
+                    @include mobile {
+                        display: none;
+                    }
+                    
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @include mobile {
+                display: none;
+            }
+            
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 550;
+                cursor: pointer;
+
+                @include tablet {
+                    display: none;
+                }
+                
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: lightgray;
+                    object-fit: cover;
+                }
+            }
+
+
+
+            
+        }
+        }
+}
