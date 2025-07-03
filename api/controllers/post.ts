@@ -10,17 +10,20 @@ export const getPosts = (req: Request, res: any) => {
   jwt.verify(token, "secretkey", (err: any, userInfo: any) => {
     if (err) return res.status(403).json("Token is not valid!");
 
-    console.log(userId);
+    const isUserIdProvided = typeof userId !== "undefined" && userId !== null && userId !== "";
 
-    const q =
-      userId !== "undefined"
-        ? `SELECT p.*, u.id AS userId, name, profilePic FROM posts AS p JOIN users AS u ON (u.id = p.userId) WHERE p.userId = ? ORDER BY p.createdAt DESC`
-        : `SELECT p.*, u.id AS userId, name, profilePic FROM posts AS p JOIN users AS u ON (u.id = p.userId)
-    LEFT JOIN relationships AS r ON (p.userId = r.followedUserId) WHERE r.followerUserId= ? OR p.userId =?
-    ORDER BY p.createdAt DESC`;
+    const q = isUserIdProvided
+      ? `SELECT p.*, u.id AS userId, name, profilePic FROM posts AS p JOIN users AS u ON (u.id = p.userId) WHERE p.userId = ? ORDER BY p.createdAt DESC`
+      : `SELECT p.*, u.id AS userId, name, profilePic FROM posts AS p JOIN users AS u ON (u.id = p.userId)
+         LEFT JOIN relationships AS r ON (p.userId = r.followedUserId)
+         WHERE r.followerUserId= ? OR p.userId = ?
+         ORDER BY p.createdAt DESC`;
 
-    const values =
-      userId !== "undefined" ? [userId] : [userInfo.id, userInfo.id];
+    const values = isUserIdProvided ? [userId] : [userInfo.id, userInfo.id];
+
+    console.log("userId:", userId);
+    console.log("userInfo.id:", userInfo.id);
+    console.log("SQL:", q, values);
 
     db.query(q, values, (err, data) => {
       if (err) return res.status(500).json(err);

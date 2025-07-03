@@ -19,9 +19,7 @@ const App = () => {
   
   const {darkMode} = useContext(DarkModeContext);
 
-  const queryClient = new QueryClient()
-
-  console.log(darkMode);
+  const queryClient = new QueryClient();
 
 
   const Layout = () => {

@@ -1,8 +1,10 @@
 import "./profile.scss";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Posts from "../../components/posts/Posts";
+import { useParams } from "react-router-dom";
 
 const Profile = () => {
+  const { id } = useParams<{ id: string }>();
   return (
     <div className="profile">
       <div className="images">
@@ -44,7 +46,7 @@ const Profile = () => {
           <button className="addFriendBtn">Добавить в друзья</button>
         </div>
 
-        <Posts />
+        <Posts userId={id} />
       </div>
     </div>
   );
