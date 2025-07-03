@@ -4,10 +4,10 @@ import { useQuery } from "@tanstack/react-query";
 import { makeRequest } from "../../axios";
 import type { PostType } from '../post/Post';
 
-const Posts = () => {
+const Posts = ({ userId }: { userId: number }) => {
   const { isLoading, error, data } = useQuery<PostType[]>({
     queryKey: ["posts"],
-    queryFn: () => makeRequest.get("/posts").then(res => res.data),
+    queryFn: () => makeRequest.get("/posts?userId="+userId).then(res => res.data),
   });
 
   if (isLoading) {
