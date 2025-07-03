@@ -10,7 +10,7 @@ import LeftBar from './components/leftBar/LeftBar';
 import { DarkModeContext } from './context/darkModeContext';
 import "./style.scss"
 import { AuthContext } from './context/authContext';
-
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 
 const App = () => {
@@ -19,22 +19,27 @@ const App = () => {
   
   const {darkMode} = useContext(DarkModeContext);
 
+  const queryClient = new QueryClient()
+
   console.log(darkMode);
 
 
   const Layout = () => {
     return (
-      <div className={`theme-${darkMode ? "dark" : "light"}`}>
-        <Navbar/>
-        <div style={{display:"flex"}}>
-          <LeftBar/>
-          <div style={{flex: "9"}}>
-            <Outlet/>
+      <QueryClientProvider client={queryClient}>
+        <div className={`theme-${darkMode ? "dark" : "light"}`}>
+          <Navbar/>
+          <div style={{display:"flex"}}>
+            <LeftBar/>
+            <div style={{flex: "9"}}>
+              <Outlet/>
+            </div>
+            
+            <RightBar/>
           </div>
-          
-          <RightBar/>
         </div>
-      </div>
+
+      </QueryClientProvider>
     )
   }
 

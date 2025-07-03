@@ -45,9 +45,12 @@
             }
             span{
                 position: absolute;
+                padding: 3px;
                 bottom: 10px;
                 left: 10px;
                 font-weight: bold;
+                background-color: rgba(0, 0, 0, 0.301);
+                border-radius: 5px;
                 color: white;
 
                 @include mobile {
@@ -57,7 +60,7 @@
 
             button {
                 position: absolute;
-                bottom: 25px;
+                bottom: 32px;
                 left: 10px;
                 background-color: themed('bg');
                 color: themed('textColor');

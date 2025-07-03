@@ -37,7 +37,7 @@ const RightBar = () => {
                         <div className="userInfo">
                             <img src="" alt="" />
                             <div className="online"/>
-                            <span className="userName">Joe Jojo</span>
+                            <span className="userName">Кожаев Яков</span>
                         </div>
                         <button>Написать</button>
                     </div>
@@ -46,7 +46,7 @@ const RightBar = () => {
                         <div className="userInfo">
                             <img src="" alt="" />
                             <div className="online"/>
-                            <span className="userName">Joe Jojo</span>
+                            <span className="userName">Петр Малыгин</span>
                         </div>
                         <button>Написать</button>
                     </div>
@@ -55,7 +55,7 @@ const RightBar = () => {
                         <div className="userInfo">
                             <img src="" alt="" />
                             <div className="online"/>
-                            <span className="userName">Joe Jojo</span>
+                            <span className="userName">Сергей Краев</span>
                         </div>
                         <button>Написать</button>
                     </div>
@@ -64,7 +64,7 @@ const RightBar = () => {
                         <div className="userInfo">
                             <img src="" alt="" />
                             <div className="online"/>
-                            <span className="userName">Joe Jojo</span>
+                            <span className="userName">Алексей Шашкин</span>
                         </div>
                         <button>Написать</button>
                     </div>
@@ -73,16 +73,7 @@ const RightBar = () => {
                         <div className="userInfo">
                             <img src="" alt="" />
                             <div className="online"/>
-                            <span className="userName">Joe Jojo</span>
-                        </div>
-                        <button>Написать</button>
-                    </div>
-
-                    <div className="user">
-                        <div className="userInfo">
-                            <img src="" alt="" />
-                            <div className="online"/>
-                            <span className="userName">Joe Jojo</span>
+                            <span className="userName">Роман Сабов</span>
                         </div>
                         <button>Написать</button>
                     </div>

@@ -10,23 +10,23 @@ const Stories = () => {
   const stories = [
     {
       id: 1,
-      name: "John Doe",
-      img: "https://images.pexels.com/photos/13916254/pexels-photo-13916254.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      name: "Кот Первый",
+      img: "https://i.pinimg.com/550x/0b/95/78/0b9578233e45f403db499f11ab6357af.jpg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     },
     {
       id: 2,
-      name: "John Doe",
-      img: "https://images.pexels.com/photos/13916254/pexels-photo-13916254.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      name: "Кот Второй",
+      img: "https://i.pinimg.com/550x/0b/95/78/0b9578233e45f403db499f11ab6357af.jpg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     },
     {
       id: 3,
-      name: "John Doe",
-      img: "https://images.pexels.com/photos/13916254/pexels-photo-13916254.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      name: "Кот Третий",
+      img: "https://i.pinimg.com/550x/0b/95/78/0b9578233e45f403db499f11ab6357af.jpg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     },
     {
       id: 4,
-      name: "John Doe",
-      img: "https://images.pexels.com/photos/13916254/pexels-photo-13916254.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      name: "Кот четвертый",
+      img: "https://i.pinimg.com/550x/0b/95/78/0b9578233e45f403db499f11ab6357af.jpg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     },
   ];
 

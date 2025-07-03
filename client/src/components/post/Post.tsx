@@ -9,13 +9,14 @@ import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import Comments from '../comments/Comments';
-interface PostType {
+
+export interface PostType {
         id: number;
         name: string;
         userId: number;
         profilePic: string;
         desc: string;
-        img?: string; // если поле img не обязательно
+        img?: string; 
     }
 
 const Post = ({post} : {post: PostType} ) => {

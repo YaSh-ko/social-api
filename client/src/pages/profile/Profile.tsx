@@ -7,12 +7,12 @@ const Profile = () => {
     <div className="profile">
       <div className="images">
         <img
-          src="https://images.pexels.com/photos/13440765/pexels-photo-13440765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src="https://avatars.mds.yandex.net/i?id=955e9cbb86ff12ba58bd97381bbbdb3e_l-9094097-images-thumbs&n=13"
           alt="cover"
           className="cover"
         />
         <img
-          src="https://images.pexels.com/photos/14028501/pexels-photo-14028501.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          src="https://i.pinimg.com/550x/0b/95/78/0b9578233e45f403db499f11ab6357af.jpg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
           alt="profile"
           className="profilePic"
         />
@@ -22,7 +22,7 @@ const Profile = () => {
         <div className="uInfo">
           <div className="header">
             <div className="center">
-              <span>Jane Doe</span>
+              <span>Кот Первый</span>
             </div>
             <div className="right">
               <MoreVertIcon />
