@@ -11,8 +11,7 @@ import { DarkModeContext } from './context/darkModeContext';
 import "./style.scss"
 import { AuthContext } from './context/authContext';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-
+import EventsPage from './pages/events/EventsPage'
 const App = () => {
 
   const { currentUser } = useContext(AuthContext);
@@ -56,6 +55,7 @@ const App = () => {
         <Route path="/" element={<ProtectedRoute><Layout/></ProtectedRoute>}>
           <Route index element={<Home />} />
           <Route path="profile/:id" element={<Profile/>}/>  
+          <Route path="events" element={<EventsPage/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

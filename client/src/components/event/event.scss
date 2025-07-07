@@ -1,6 +1,6 @@
 @import "../../style.scss";
 
-.post {
+.event {
     @include themify($themes){
         .container {
             padding: 20px;
@@ -17,24 +17,6 @@
             display: flex;
             justify-content: space-between;
 
-            .rightHeader {
-                display: flex;
-                align-items: center;
-                gap: 20px;
-            }
-            .tags {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-
-                .tag {
-                    background-color: themed("buttonColor");
-                    padding: 5px 12px;
-                    border-radius: 20px;
-                    font-size: 12px;
-                    color: black;
-                }
-            }
             .userInfo {
                 display: flex;
                 gap: 20px;
@@ -70,6 +52,15 @@
 
         .content {
             margin: 20px 0px;
+
+            .nameInfo {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .eventName {
+                font-size: 24px;
+            }
             
             img {
                 width: 100%;
@@ -78,12 +69,50 @@
                 margin-top: 20px;
                 border-radius: 10px;
             }
+
+            p {
+                margin-top: 20px;
+            }
         }
 
         .info {
             display: flex;
             align-items: center;
-            gap: 20px;
+            justify-content: space-between;
+
+            .left {
+                display: flex;
+                gap: 20px;
+            }
+
+            .right {
+                display: flex;
+                gap: 20px;
+            }
+             .checkUsersBtn {
+                padding: 7px;
+                border-radius: 5px;
+                background-color: themed('buttonColor');
+                border: none;
+                align-self: stretch;
+                cursor: pointer;
+            }
+
+            .signUpBtn {
+                padding: 7px;
+                border-radius: 5px;
+                background-color: #2ECC71;
+                color: white;
+                border: none;
+                align-self: stretch;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: darken(#2ECC71, 10%);
+                }
+            }
+            
 
             
             .item {

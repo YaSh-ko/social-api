@@ -32,10 +32,12 @@ const LeftBar = () => {
                         <MarkunreadIcon sx={{ fontSize: 30, width: 40}}/>
                         <span>Сообщения</span>
                     </div>
-                    <div className="item">
-                        <EventIcon sx={{ fontSize: 30, width: 40}}/>
-                        <span>Мероприятия</span>
-                    </div>
+                    <Link to="events" style={{textDecoration: 'none'}}>
+                        <div className="item">
+                            <EventIcon className='icon'/>
+                            <span>Мероприятия</span>
+                        </div>
+                    </Link>
                     
                 </div>
             </div>

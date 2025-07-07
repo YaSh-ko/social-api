@@ -37,6 +37,14 @@
                     margin-bottom: 20px;
                 }
                     
+                .mapImg {
+                    border-radius: 10px;
+                    &:hover {
+                        scale: (1.01);
+                    }
+                }
+
+                
                 
 
                 .event {
