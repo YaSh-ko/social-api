@@ -1,7 +1,8 @@
 // src/index.ts
 import express from 'express';
 // import userRoutes from './routes/users'
-// import likeRoutes from './routes/likes'
+import likeRoutes from './routes/likes'
+import eventsRoutes from './routes/events'
 // import commentRoutes from './routes/comments'
 import postRoutes from './routes/posts'
 import authRoutes from './routes/auth'
@@ -40,8 +41,8 @@ app.post("/api/upload", upload.single("file"), (req, res)=>{
   res.status(200).json(file?.filename)
 })
 app.use("/api/auth", authRoutes)
-// app.use("/api/users", userRoutes)
-// app.use("/api/likes", likeRoutes)
+app.use("/api/events", eventsRoutes)
+app.use("/api/likes", likeRoutes)
 // app.use("/api/comments", commentRoutes)
 app.use("/api/posts", postRoutes)
 
